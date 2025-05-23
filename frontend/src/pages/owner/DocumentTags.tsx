@@ -18,7 +18,7 @@ import { EditDocumentTagModal } from '@/components/filters/EditDocumentTagModal'
 // API function to fetch document tags
 const fetchDocumentTags = async () => {
   try {
-    const response = await fetch('https://digitial-archieve-backend.vercel.app/document-tags', {
+    const response = await fetch('https://digital-archive-beta.vercel.app/document-tags', {
       headers: {
         'Authorization': `Bearer ${document.cookie.split('jwt_token=')[1]?.split(';')[0] || ''}`,
       },
@@ -39,7 +39,7 @@ const fetchDocumentTags = async () => {
 // API function to update a document tag
 const updateDocumentTag = async ({ id, data }: { id: string; data: any }) => {
   try {
-    const response = await fetch(`https://digitial-archieve-backend.vercel.app/document-tags/${id}`, {
+    const response = await fetch(`https://digital-archive-beta.vercel.app/document-tags/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

@@ -106,7 +106,7 @@ export default function DocumentView() {
     try {
       setIsCheckingShare(true);
       const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
-      const response = await fetch(`https://digitial-archieve-backend.vercel.app/get-shared-url/${documentId}`, {
+      const response = await fetch(`https://digital-archive-beta.vercel.app/get-shared-url/${documentId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -277,7 +277,7 @@ export default function DocumentView() {
 
       const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
 
-      const response = await fetch(`https://digitial-archieve-backend.vercel.app/download-document/${id}`, {
+      const response = await fetch(`https://digital-archive-beta.vercel.app/download-document/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -319,7 +319,7 @@ export default function DocumentView() {
 
       const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
 
-      const response = await fetch("https://digitial-archieve-backend.vercel.app/share-document", {
+      const response = await fetch("https://digital-archive-beta.vercel.app/share-document", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

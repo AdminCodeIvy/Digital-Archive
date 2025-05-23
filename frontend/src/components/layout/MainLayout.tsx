@@ -18,7 +18,7 @@ export const MainLayout = ({ children, requiredRole = [] }: MainLayoutProps) => 
   useEffect(() => {
     const checkApiConnection = async () => {
       try {
-        const response = await fetch('https://digitial-archieve-backend.vercel.app/plans');
+        const response = await fetch('https://digital-archive-beta.vercel.app/plans');
         const isConnected = response.ok;
         setIsApiConnected(isConnected);
         

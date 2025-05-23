@@ -13,7 +13,7 @@ export const addDocumentHistory = async (document_id: string, edit_description: 
   try {
     const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
     
-    const response = await fetch('https://digitial-archieve-backend.vercel.app/document-history', {
+    const response = await fetch('https://digital-archive-beta.vercel.app/document-history', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export const getDocumentHistory = async (document_id: string) => {
   try {
     const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
     
-    const response = await fetch(`https://digitial-archieve-backend.vercel.app/document-history/${document_id}`, {
+    const response = await fetch(`https://digital-archive-beta.vercel.app/document-history/${document_id}`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }

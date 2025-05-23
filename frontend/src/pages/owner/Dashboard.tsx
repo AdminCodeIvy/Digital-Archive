@@ -59,7 +59,7 @@ export default function OwnerDashboard() {
       try {
         const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
 
-        const response = await fetch("https://digitial-archieve-backend.vercel.app/disputes", {
+        const response = await fetch("https://digital-archive-beta.vercel.app/disputes", {
           headers: {
             "Authorization": `Bearer ${token}`
           }

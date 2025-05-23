@@ -2,7 +2,7 @@ import { toast } from 'sonner';
 import axios from 'axios';
 import { Invoice, ClientOverviewMetrics, CustomInvoiceItem, Plan, Company } from '@/types';
 
-const API_BASE_URL = 'https://digitial-archieve-backend.vercel.app';
+const API_BASE_URL = 'https://digital-archive-beta.vercel.app';
 
 interface ApiResponse<T> {
   data?: T;

@@ -30,7 +30,7 @@ interface Property {
 
 // Function to create a document tag
 const createDocumentTag = async (data: { title: string; properties: { name: string; type: string }[] }) => {
-  const response = await fetch('https://digitial-archieve-backend.vercel.app/document-tags', {
+  const response = await fetch('https://digital-archive-beta.vercel.app/document-tags', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

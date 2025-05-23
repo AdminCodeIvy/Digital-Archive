@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       if (!token) return;
       
       try {
-        const response = await fetch('https://digitial-archieve-backend.vercel.app/verify-token', {
+        const response = await fetch('https://digital-archive-beta.vercel.app/verify-token', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await fetch('https://digitial-archieve-backend.vercel.app/login', {
+      const response = await fetch('https://digital-archive-beta.vercel.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

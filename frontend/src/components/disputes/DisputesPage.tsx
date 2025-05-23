@@ -40,7 +40,7 @@ const DisputesPage = () => {
       setLoading(true);
       const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
       
-      const response = await fetch("https://digitial-archieve-backend.vercel.app/disputes", {
+      const response = await fetch("https://digital-archive-beta.vercel.app/disputes", {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -64,7 +64,7 @@ const DisputesPage = () => {
     try {
       const token = document.cookie?.split('jwt_token=')[1]?.split(';')[0] || '';
       
-      const response = await fetch(`https://digitial-archieve-backend.vercel.app/disputes/${disputeId}/resolve`, {
+      const response = await fetch(`https://digital-archive-beta.vercel.app/disputes/${disputeId}/resolve`, {
         method: "PUT",
         headers: {
           "Authorization": `Bearer ${token}`
